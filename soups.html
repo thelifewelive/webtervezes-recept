@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Oldal komponensek -->
+		<meta charset="utf-8">
+		<title>Az igazi receptkönyv</title>
+		<link rel="shortcut icon" href="images/title_logo.png" />
+
+		<!-- Styleok hozzáadása -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link rel="stylesheet" type="text/css" href="styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/recept.css">
+
+		<!-- Scriptek betöltése -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/content-list.js"></script>
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+	</head>
+
+	<header>
+		<div id="header">
+			<div id="overlay">
+				<!-- Random háttér beállítása -->
+				<script>setHeaderImage()</script>
+				<img id="book-logo" src="images/book_logo.png">
+				<h1>receptkönyv<br><span>az igazi érték egy helyen</span></h1>
+
+				<!-- Menü létrehozása -->
+				<div id="menu">
+					<ul>
+						<li><a href="./index.html">Főoldal</a></li>
+						<li id="menu-active">Levesek</li>
+						<li><a href="a.html">Sültek</a></li>
+						<li><a href="a.html">Sütemények</a></li>
+						<li><a href="a.html">Torták</a></li>
+						<li><a href="a.html">Kedvencek</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+		<!-- Oldal tartalmának létrehozása -->
+		<div id="content">
+			<div class="submenu">
+				<h1>Leves receptek<span><br>A legjobb levesek egy helyen</span></h1>
+				<!-- Levesek almenü -->
+				<div class="tab">
+					<button id="defaultOpen" class="tablinks" onclick="openContent(event, 'Husleves')">Expressz húsleves</button>
+					<button class="tablinks" onclick="openContent(event, 'Gyumolcsleves')">Puddingos gyümölcsleves</button>
+					<button class="tablinks" onclick="openContent(event, 'Legenyfogo')">Legényfogóleves</button>
+				</div>
+
+				<!-- Leves Contentek -->
+				<div id="Husleves" class="tabcontent animate">
+					<div class="recept">
+						<h1>Expressz Húsleves<span><br>megfázásra</span></h1>
+						<img src="./images/soup/husleves.jpg">
+						<p>Biztos Ti is ismeritek azt az érzést, amikor egy vírus ledönt a lábatokról,
+							a torokfájástól beszélni sem tudtok, és semmi másra nem vágytok,
+							mint egy forró házi húslevesre. Én ilyenkor szoktam megkérni a férjemet,
+							hogy főzze meg a kedvenc, “gyógyító” húslevesemet, mert ez tényleg egy csodaszer,
+							és ami még különösen jó benne, hogy nagyon hamar elkészül, nem kell órákig a fazék
+							mellett állni. Bár tudom, hogy sokan az egész délelőtt gyöngyöző levesre szavaznak,
+							higgyétek el, ez is legalább olyan finom, és a néhány extra hozzávaló mint a gyömbér,
+							a lime és az újhagyma még tovább fokozza jótékony hatását.
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 5 adag</h2>
+								<ul>
+									<li>1 db csirke</li>
+									<li>2 közepes db sárgarépa</li>
+									<li>2 közepes db burgonya</li>
+									<li>1 db tojás</li>
+									<li>4 cm gyömbér</li>
+									<li>80 g tészta (penne, cérnametélt, stb. ízlés szerint)</li>
+									<li>1 db leveskocka</li>
+									<li>1 lime-ból nyert limelé</li>
+									<li>1 közepes db újhagyma</a></li>
+									<li>só ízlés szerint</li>
+									<li>bors ízlés szerint</li>
+									<li>oregánó ízlés szerint</li>
+									<li>2 l víz (kb.)</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A tyúkot/csirkét 8 darabra vágjuk (alsó- és felsőcombok,
+										szárnyak, csirkemell két részben). A csirkemellet félrerakhatjuk,
+										de bele is főzhetjük a levesbe.</li>
+									<li>Egy nagyobb lábosban vizet forralunk, sózzuk-borsozzuk,
+										hozzáadjuk a tyúkhúsleveskockát és a két darabba vágott,
+										meghámozott gyömbért. Beletesszük a csirkehúst, és lefedve kb. 30 percig főzzük.
+									</li>
+									<li>Közben a sárgarépát és a burgonyát meghámozzuk,
+										a répát felkarikázzuk, a burgonyát kockákra vágjuk.
+										A leveshez adjuk a zöldségeket, majd néhány perc elteltével a
+										tésztát. Addig főzzük, amíg a tészta megpuhul.
+									</li>
+									<li>A tojást a lábos felett feltörjük, és folyamatos keverés
+										mellett a levesbe csorgatjuk. Végül kevés szárított oregánóval
+										ízesítjük a levest. Tálaláskor limelét facsarunk bele, és
+										megszórjuk apróra vágott újhagymával. Egészségetekre!
+									</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="Gyumolcsleves" class="tabcontent animate">
+					<div class="recept">
+						<h1>Puddingos gyümölcsleves<span><br>az édes szájuaknak</span></h1>
+						<img src="./images/soup/gyumolcsleves.jpg">
+						<p>A nagy gyerekkori kedvenc. A nyári nyaralások a nagyszülőknél,
+							délben berohanás a játékból, és már ott volt az asztalon a kihűtött,
+							 gyönyörű színű, illatos gyümileves! Ezek jutnak mindig eszembe róla.
+							  Nagymamáim, ha igazán kedvünkre akartak tenni, biztos ezzel vártak
+							   bennünket, vagy csak egy szóra is, rögtön elkészítették.
+							   Sajnos Nagymamák már nincsenek, ezért saját magamnak kell a
+							   kedvemre tenni, így ha nagyon megkívánjuk, bizony neki kell állni.
+							    Ami azért meg kell mondjam, nem olyan nagy erőfeszítés...
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 8 adag</h2>
+								<ul>
+									<li>350 g meggybefőtt</li>
+									<li>350 g őszibarack konzerv</li>
+									<li>350 g szilvabefőtt</li>
+									<li>1 közepes db alma</li>
+									<li>150 g erdei gyümölcs mix</li>
+									<li>1 kk fahéj</li>
+									<li>5 db szegfűszeg</li>
+									<li>4 evőkanál finomliszt</li>
+									<li>450 g tejföl</li>
+									<li>6 ek cukor</li>
+									<li>1 csipet só</li>
+									<li>2 l víz (szükség szerint)</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A befőtteket, ha házi eltett, vagy nincs benne tartósítószer, levükkel együtt&nbsp;beleöntjük egy nagyobb fazékba, hozzáadjuk az erdei gyümölcsöket, és a meghámozott, kockákra vágott almát.</li>
+									<li>Felöntjük&nbsp;vízzel,&nbsp;kb 5 l -re.</li>
+									<li>Beletesszük a cukrot, ha nem használtuk a befőttek levét akkor több cukrot,&nbsp;sót, fahéjat, és szegfűszeget, és összeforraljuk.</li>
+									<li>Ezalatt kikeverjük a lisztet a tejföllel csomómentesre.</li>
+									<li>Ha felforrt a leves,&nbsp;kisebb adagokban felhigítjuk a tejfölös lisztet a lével jó folyósra,&nbsp;majd a forrásban lévő levesbe öntjük. Azonnal kevergetjük, és pár percet hagyjuk forrni.</li>
+									<li>Megkóstoljuk, és ízlés szerint még édesíthetjük.</li>
+									<li>Tálalás&nbsp;előtt <strong>hidegre hűtjük</strong>.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="Legenyfogo" class="tabcontent animate">
+					<div class="recept">
+						<h1>Legenyfogóleves<span><br>a kedvencek egyike</span></h1>
+						<img src="./images/soup/legenyfogoleves.jpg">
+						<p>
+							Kedvenc leveseim egyike. Sajnos ritkán készítem, mert családom nem minden tagja rajong a gombáért.
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 8 adag</h2>
+								<ul>
+									<li>1 db csirkemell filé (kockára vágva)</li>
+									<li>1 kis fej vöröshagyma</li>
+									<li>20 dkg sárgarépa</li>
+									<li>20 dkg fehérrépa</li>
+									<li>20 dkg gomba (vagy szárított vargánya )</li>
+									<li>babérlevél ízlés szerint</li>
+									<li>bazsalikom ízlés szerint</li>
+									<li>1 teáskanál mustár (ízlés szerint)</li>
+									<li>2 dl tejföl</li>
+									<li>1 csapott ek finomliszt</li>
+									<li>só ízlés szerint</li>
+									<li>bors ízlés szerint</li>
+									<li>1 ek napraforgó olaj</a></li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A hagymát összevágjuk, majd olajon megpirítjuk.</li>
+									<li>Hozzáadjuk a kockára vágott csirkemellet, fűszerezzük,
+										majd rövid ideig pároljuk.</li>
+									<li>Beletesszük a mustárt és a kockára vágott zöldségeket.
+										Vízzel felengedjük, és készre főzzük.</li>
+									<li>Tejfölös habarással sűrítjük a levest.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<script>
+					// Elindítjuk az alapértelmezett panelt
+					document.getElementById("defaultOpen").click();
+				</script>
+
+			</div>
+		</div>
+	</body>
+
+	<footer>
+		<div id="footer">
+			<p>Kövess minket különböző <span>social media</span> oldalainkon is</p>
+				<a href="https://facebook.com"><img src="images/face_logo.png"></a>
+				<a href="https://youtube.com"><img src="images/youtube_logo.png"></a>
+				<a href="https://twitter.com"><img src="images/twitter_logo.png"></a>
+				<a href="https://instagram.com"><img src="images/insta_logo.png"></a>
+		</div>
+		<p style="text-align: center">Webtervezés gyakorlat 2019</p>
+	<footer>
+
+
+</html>

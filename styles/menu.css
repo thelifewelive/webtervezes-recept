@@ -27,6 +27,11 @@
 	text-decoration: none;
 }
 
+#menu-active {
+	color: black;
+	cursor: pointer;
+}
+
 #menu li a:hover {
 	color: black;
 	transition: 0.4s;
