@@ -28,10 +28,13 @@
 	color: rgb(204, 153, 0);
 }
 
+.recept ul {
+	list-style-type: circle;
+}
+
 .recept li {
 	font-size: 12px;
 	text-align: left;
-	margin-bottom: 10px;
 }
 
 .recept p {

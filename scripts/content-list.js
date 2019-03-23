@@ -1,4 +1,4 @@
-function openContent(evt, cityName) {
+function openContent(evt, contentName) {
 	// Létrehozzuk a változókat
   	var i, tabcontent, tablinks;
 
@@ -15,6 +15,6 @@ function openContent(evt, cityName) {
 	}
 
 	// Megjelenítjük az aktuális tab -et és hozzáadjuk az active class -t
-  	document.getElementById(cityName).style.display = "block";
+  	document.getElementById(contentName).style.display = "block";
   	evt.currentTarget.className += " active";
 }
