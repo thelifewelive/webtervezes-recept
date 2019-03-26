@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Oldal komponensek -->
+		<meta charset="utf-8">
+		<title>Az igazi receptkönyv</title>
+		<link rel="shortcut icon" href="images/title_logo.png" />
+
+		<!-- Styleok hozzáadása -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link rel="stylesheet" type="text/css" href="styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/recept.css">
+
+		<!-- Scriptek betöltése -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/content-list.js"></script>
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+	</head>
+
+	<header>
+		<div id="header">
+			<div id="overlay">
+				<!-- Random háttér beállítása -->
+				<script>setHeaderImage()</script>
+				<img id="book-logo" src="images/book_logo.png">
+				<h1>receptkönyv<br><span>az igazi érték egy helyen</span></h1>
+
+				<!-- Menü létrehozása -->
+				<div id="menu">
+					<ul>
+						<li><a href="./index.html">Főoldal</a></li>
+						<li><a href="./soups.html">Levesek</a></li>
+						<li> <a href="./backed.html">Sültek</a></li>
+						<li id="menu-active">Sütemények</li>
+						<li><a href="a.html">Torták</a></li>
+						<li><a href="a.html">Kedvencek</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+		<!-- Oldal tartalmának létrehozása -->
+		<div id="content">
+			<div class="submenu">
+				<h1>Sütemények receptei<span><br>A legjobb sütemények egy helyen</span></h1>
+				<!-- Levesek almenü -->
+				<div class="tab">
+					<button id="defaultOpen" class="tablinks" onclick="openContent(event, 'vanella')">Vanella szelet</button>
+					<button class="tablinks" onclick="openContent(event, 'pilota')">Pilóta szelet</button>
+					<button class="tablinks" onclick="openContent(event, 'kolibri')">Kolibri szelet</button>
+					</div>
+
+				<!-- Sütik Contentek -->
+				<div id="vanella" class="tabcontent animate">
+					<div class="recept">
+						<h1>Vanella szelet<span><br>Tömör gyönyör</span></h1>
+						<img src="./images/soup/vanella.jpg">
+						<p>
+							A család kedvenc süteménye,
+							amit már évek óta szinte hetente megcsinálok.
+							Régebben egy másik tészta recepttel készítettem,
+							de kaptam egy másik receptet és annak a tésztája finomabb volt.
+							 Így azóta a két sütemény kombinációjaként sütöm.
+							 Nagyon finom és szerintem gyorsan el is készíthető.
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 6 adag</h2>
+								<h3>A tésztához</h3>
+								<ul>
+									<li>6 db tojás</li>
+									<li>25 dkg cukor</li>
+									<li>1.25 dl víz</li>
+									<li>1.25 dl napraforgó olaj</li>
+									<li>20 dkg finomliszt</li>
+									<li>0.5 csomag sütőpor</li>
+									<li>2 ek cukrozatlan kakaópor</li>
+									<li>5 dkg dió (vágott)</li>
+									<li>1 ek vaj (a tepsi kikenéséhez)</li>
+									<li>1 evőkanál finomliszt (a tepsi kikenéséhez)</li>
+								</ul>
+								<h3>A krémhez</h3>
+								<ul>
+									<li>1 db tojás</li>
+									<li>5 ek cukor</li>
+									<li>7 dl tej</li>
+									<li>7 evőkanál finomliszt</li>
+									<li>2 csomag vaníliás cukor</li>
+									<li>25 dkg margarin</li>
+								</ul>
+								<h3>A tetejére</h3>
+								<ul>
+									<li>10 dkg tortabevonó</li>
+									<li>3 ek napraforgó olaj</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A tojások sárgáját a cukorral habosra keverjük.</li>
+									<li>Hozzáadjuk az olajat és a vizet, elkeverjük, majd a liszttel elkevert sütőport és a kakaóport is hozzáadagoljuk.</li>
+									<li>Következik a vágott dió, végül a tojások felvert habja.</li>
+									<li>Vajazott, lisztezett tepsibe öntjük. (Az én tepsim 29X38) cm. 180 fokra előmelegített sütőben kb. 25-30 percig sütjük. Célszerű tűpróbával ellenőrizni.</li>
+									<li><em>Amíg sül, elkészítjük a krémet.</em></li>
+									<li>A tojást a cukorral kikeverjük, hozzáadjuk a lisztet, és a tejet apránként adagolva csomómentesre keverjük. Sűrű krémet főzünk. Eléggé csomósodik, de a végén robotgéppel a csomókat simára ki tudjuk keverni. Még melegen beleszórjuk a vaníliás cukrokat.</li>
+									<li>Ha kihűlt, a margarinnal összedolgozzuk. Fontos, hogy a margarin és a krém is szoba hőmérsékletű legyen.</li>
+									<li>A kész krémmel bevonjuk a tésztát.</li>
+									<li>A tetejére csokimáz kerül.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="pilota" class="tabcontent animate">
+					<div class="recept">
+						<h1>Pilóta szelet<span><br>Repülő mámor</span></h1>
+						<img src="./images/soup/pilota.jpg">
+						<p>
+							Miért ne lehetne a pilóta kekszet süti formájában is elkészíteni...
+							ez volt az alapgondolat. Lehet, és szerintünk nagyon finom lett :)
+							Gyereknapra szeretettel!
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 6 adag</h2>
+								<h3>A tésztához</h3>
+								<ul>
+									<li>40 dkg finomliszt</li>
+									<li>12 dkg porcukor</li>
+									<li>2 db tojássárgája</li>
+									<li>10 dkg vaj</li>
+									<li>175 g tejföl</li>
+									<li>20 g cukrozatlan kakaópor (1 evőkanál)</li>
+									<li>1 teáskanál sütőpor</li>
+								</ul>
+								<h3>A krémhez</h3>
+								<ul>
+									<li>2 tasak csokoládés pudingpor</li>
+									<li>5 dl tej</li>
+									<li>10 dkg vaj</li>
+									<li>12 dkg cukor</li>
+									<li>10 dkg nutella (2 nagy evőkanál)</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A lisztben elkeverjük a porcukrot, sütőport és egy csipet sót. Belemorzsoljuk a vajat, és a tojássárgákkal valamint a tejföllel, könnyen gyúrható tésztát készítünk. Lehet, hogy kevesebb tejföl is elég, ez függ a liszt minőségétől.</li>
+									<li>A tészta egyharmad részét félretesszük, a kétharmad részbe pedig beledolgozzuk a kakaót.</li>
+									<li>Megsütjük a lapokat, 1 simát és 2 barnát. A lapokat ne süssük túl, mert kiszáradnak! 180 fokon kb. 8-10 perc. Sütés előtt szurkáljuk meg villával, hogy ne púposodjon fel.</li>
+									<li>A krémhez folyamatos keverés mellett sűrűre főzzük a tejben a pudingport, még forrón belekeverjük a cukrot.</li>
+									<li>Ha kihűlt a puding, a puha vajat és a nutellát gépi habverővel alaposan összedolgozzuk.</li>
+									<li>Végül megtöltjük a lapokat. A krémből hagyhatunk a tetejére, de bevonhatjuk csokimázzal is.
+										Másnap szeleteljük, addig a lapok bepuhulnak.</li>
+									</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="kolibri" class="tabcontent animate">
+					<div class="recept">
+						<h1>Kolibri szelet<span><br>Egyszerűen állati</span></h1>
+						<img src="./images/soup/kolibri.jpg">
+						<p>
+							Amerikában népszerű Kolibri tortát készítettem el süteményként.
+							A tészta szaftos, zamatos és gyümölcsös a banán, ananász és dió hármastól.
+							A krémet pedig a lime teszi különlegessé. Tömény sütemény, úgyhogy sokat nem lehet belőle megenni.
+							Röviden így tudnám jellemezni: különleges tömör gyönyör. :)
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 6 adag</h2>
+								<h3>A tésztához</h3>
+								<ul>
+									<li>4 közepes db banán (érett)</li>
+									<li>425 g ananászkonzerv (friss, érett ananász is lehet)</li>
+									<li>350 g finomliszt</li>
+									<li>50 g porcukor</li>
+									<li>3 db tojás</li>
+									<li>2 dl olívaolaj</li>
+									<li>1 teáskanál szódabikarbóna</li>
+									<li>1 kávéskanál fahéj</li>
+									<li>1 kávéskanál só</li>
+									<li>1 teáskanál vanília kivonat</li>
+									<li>50 g dió (eredeti recept szerint pekándió)</li>
+								</ul>
+								<h3>A krémhez</h3>
+								<ul>
+									<li>400 g mascarpone</li>
+									<li>200 g vaj (szobahőmérsékletű)</li>
+									<li>300 g porcukor</li>
+									<li>1 lime-ból nyert lime héja</li>
+									<li>1 lime-ból nyert limelé</li>
+									<li>1 teáskanál vanília kivonat</li>
+								</ul>
+								<h3>A tetejére</h3>
+								<ul>
+									<li>30 g dió (eredeti recept szerint pekándió)</li>
+									<li>0.5 lime-ból nyert lime héja</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<h3>A tészta</h3>
+								<ol>
+									<li>Melegítsük elő a sütőt 180 fokra, és sütőpapírral béleljünk ki egy kb. 25x33 cm-es tepsit.</li>
+									<li>Egy nagy tálba szitáljuk össze a lisztet, a cukrot, a szódabikarbónát, a fahéjat és a sót.</li>
+									<li>A banánt törjük össze pépesre villával, az ananászt pedig nagyon apróra, szinte pépesre aprítsuk fel.
+										A diót mozsárban törjük tetszés szerint darabosra.</li>
+										<li>A gyümölcsökhöz keverjük hozzá a tojásokat, az olajat és a vaníliát, majd dolgozzuk össze a száraz hozzávalókkal. A legvégén forgassuk bele a feldarabolt diót is. </li>
+										<li>Kanalazzuk a tésztát a formába, simítsuk el, és kb. 30-35 perc alatt süssük készre (tűpróba). Ha még nem sült meg, de a teteje már sötétbarna, kezd pirulni, akkor tegyünk rá egy alufóliát, és úgy süssük tovább.
+											Hűtsük ki egy kicsit, és fordítsuk rácsra a további teljes kihűlésig.</li>
+								</ol>
+								<h3>A krém</h3>
+								<ol>
+									<li>Amíg sül a tészta, géppel keverjük habosra először a vajat és a cukrot, majd keverjük hozzá a krémsajtot. Végül adjuk  hozzá a vanília kivonatot, valamint egy lime reszelt héját és levét.</li>
+									<li>Tegyük hűtőbe, amíg a tészta is kihűl, majd kenjük a tetejére.</li>
+								</ol>
+								<h3>Tetejére</h3>
+								<ol>
+									<li>Szórjuk meg a tetejét dióval, és reszeljünk rá díszítésnek egy kis lime héjat. </li>
+									<li>Tegyük hűtőbe, hogy megdermedjen a krém, és könnyen szeletelni tudjuk.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+
+				<script>
+					// Elindítjuk az alapértelmezett panelt
+					document.getElementById("defaultOpen").click();
+				</script>
+
+			</div>
+		</div>
+	</body>
+
+	<footer>
+		<div id="footer">
+			<p>Kövess minket különböző <span>social media</span> oldalainkon is</p>
+				<a href="https://facebook.com"><img src="images/face_logo.png"></a>
+				<a href="https://youtube.com"><img src="images/youtube_logo.png"></a>
+				<a href="https://twitter.com"><img src="images/twitter_logo.png"></a>
+				<a href="https://instagram.com"><img src="images/insta_logo.png"></a>
+		</div>
+		<p style="text-align: center">Webtervezés gyakorlat 2019</p>
+	<footer>
+
+
+</html>
