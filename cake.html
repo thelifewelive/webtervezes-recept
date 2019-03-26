@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Oldal komponensek -->
+		<meta charset="utf-8">
+		<title>Az igazi receptkönyv</title>
+		<link rel="shortcut icon" href="images/title_logo.png" />
+
+		<!-- Styleok hozzáadása -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link rel="stylesheet" type="text/css" href="styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/recept.css">
+
+		<!-- Scriptek betöltése -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/content-list.js"></script>
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+	</head>
+
+	<header>
+		<div id="header">
+			<div id="overlay">
+				<!-- Random háttér beállítása -->
+				<script>setHeaderImage()</script>
+				<img id="book-logo" src="images/book_logo.png">
+				<h1>receptkönyv<br><span>az igazi érték egy helyen</span></h1>
+
+				<!-- Menü létrehozása -->
+				<div id="menu">
+					<ul>
+						<li><a href="./index.html">Főoldal</a></li>
+						<li><a href="./soups.html">Levesek</a></li>
+						<li> <a href="./backed.html">Sültek</a></li>
+						<li><a href="./bagel.html">Sütemények</li>
+						<li id="menu-active">Torták</li>
+						<li><a href="a.html">Kedvencek</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+		<!-- Oldal tartalmának létrehozása -->
+		<div id="content">
+			<div class="submenu">
+				<h1>Torták receptei<span><br>A legjobb torták egy helyen</span></h1>
+				<!-- Levesek almenü -->
+				<div class="tab">
+					<button id="defaultOpen" class="tablinks" onclick="openContent(event, 'gyors')">A leggyorsabb csokitorta</button>
+					<button class="tablinks" onclick="openContent(event, 'csoki')">Csupa csoki torta (sütés nélkül)</button>
+					<button class="tablinks" onclick="openContent(event, 'szivarvany')">Szivárvány torta</button>
+					</div>
+
+				<!-- Sütik Contentek -->
+				<div id="gyors" class="tabcontent animate">
+					<div class="recept">
+						<h1>A leggyorsabb csokitorta<span><br>Tömör gyönyör</span></h1>
+						<img src="./images/soup/gyorstorta.jpg">
+						<p>
+							A legegyszerűbb és a leggyorsabb csokitorta,
+							aminek egyetlen titka van: nem szabad túlsütni!
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 8 adag</h2>
+								<ul>
+									<li>180 g cukor</li>
+									<li>150 g olvasztott vaj</li>
+									<li>40 g cukrozatlan kakaópor</li>
+									<li>1 csipet só</li>
+									<li>1 teáskanál vanília kivonat</li>
+									<li>2 db tojás</li>
+									<li>260 g finomliszt</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A cukort, az olvasztott vajat, a kakaóport, egy csipet sót és a vaníliakivonatot egy tálba öntjük, majd habverővel alaposan összekeverjük.</li>
+									<li>Egyenként eldolgozzuk benne a tojásokat.</li>
+									<li>Hozzáadjuk a lisztet, és csomómentesre keverjük.</li>
+									<li>A tésztát kivajazott és kilisztezett formába öntjük, majd 180 fokra előmelegített sütőben 12-14 percig sütjük.</li>
+									<li>Porcukorral megszórva, gyümölcsökkel vagy vaníliafagyival is tálalhatjuk, de tortaalapnak is kiváló.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="csoki" class="tabcontent animate">
+					<div class="recept">
+						<h1>Csupa csoki torta (sütés nélkül)<span><br>Egyszerűen nagyszerű</span></h1>
+						<img src="./images/soup/csoki.jpg">
+						<p>
+							Vigyázat, csoki túladagolás! :)
+							Csokis zabkeksz alap, tripla csokis tejszínes krém, és már kész is.
+							Ez a mi kedvenc csupa csoki tortánk, sütés nélkül! :)
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 10 adag</h2>
+								<ul>
+									<li>200 g csokis zabkeksz</li>
+									<li>50 g olvasztott vaj</li>
+									<li>1.5 ek cukrozatlan kakaópor</li>
+									<li>50 g étcsokoládé (fél tábla)</li>
+									<li>400 ml habtejszín</li>
+									<li>2 ek vaj</li>
+									<li>300 g étcsokoládé (3 tábla)</li>
+									<li>1 ek cukrozatlan kakaópor (a tetejére)</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>Egy aprítógépbe dobjuk a zabkekszeket, az olvasztott vajat és a kakaóport, majd ledaráljuk.
+										Hozzáadjuk a fél tábla étcsokit, és darabosra daráljuk.</li>
+									<li>Egy sütőpapírral bélelt, csatos tortaformába öntjük a csokis masszát, és jól lenyomkodjuk.
+										Legalább 30 percig a hűtőben pihentetjük.</li>
+									<li>Egy edénybe felforraljuk a tejszín-vaj-étcsoki triót, majd lehűtjük.</li>
+									<li>A lehűlt csokis krémet, a kekszes alapra öntjük, majd hűtőben pihentetjük néhány óráig.</li>
+									<li>Tálalás előtt egy evőkanál kakaóporral szórjuk meg a torta tetejét!</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="szivarvany" class="tabcontent animate">
+					<div class="recept">
+						<h1>Szivárvány torta fehércsokis krémmel<span><br>Sokszínű</span></h1>
+						<img src="./images/soup/szivarvany.jpg">
+						<p>
+							2. házassági évfordulónkra sütöttem a tortát.
+							Igaz, hogy nem a leggyorsabban elkészíthető torta,
+							és sok benne az ételszínező, de azt hiszem, különleges
+							alkalmakkor ez mind megengedett. Tényleg megérte a fáradságot,
+						 	 mert nem csak mutatós lett, hanem nagyon finom is:-)!
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 12 adag</h2>
+								<h3>Piskótához</h3>
+								<ul>
+									<li>12 db tojás</li>
+									<li>12 csapott ek finomliszt</li>
+									<li>3 kávéskanál ételfesték (színenként, piros, kék, zöld, lila, narancs és citromsárga ételszínező)</li>
+									<li>12 ek cukor</li>
+								</ul>
+								<h3>A krémhez</h3>
+								<ul>
+									<li>25 dkg mascarpone (krémsajt)</li>
+									<li>0.5 l növényi habtejszín (habtejszín)</li>
+									<li>20 dkg fehér csokoládé</li>
+									<li>2 csomag habfixáló</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>Elkészítjük a 2 tojásos piskótákat. A narancs, citrom, lila és piros piskótákat sütjük ki először.</li>
+									<li>Piskóta: 2 tojásfehérjét habbá verjük egy csipet sóval. Majd a két tojássárgáját 2 kanál kristálycukorral habbá verjük, és hozzáadunk 2 kanál lisztet, majd óvatosan hozzáadjuk a habbá vert fehérjét. Végül a színezőt öntjük bele, amíg el nem érjük a tetszés szerinti színt.</li>
+									<li>Kivajazott-lisztezett tortaformába öntjük és megsütjük. Így sütjük ki a piskótákat egyenként, szín szerint. A kék és zöld színű piskótáknál a tojások sárgáját kihagyjuk a szebb szín érdekében.</li>
+									<li>Ha megsültek a piskóták, <strong>hagyjuk kihűlni</strong> őket, és közben elkészítjük a krémet.</li>
+									<li>A fehér csokoládét gőz fölött megolvasztjuk, langyosan a mascarpone sajthoz keverjük.</li>
+									<li>A Hulalát a habfixálókkal kemény habbá verjük, és óvatosan összekeverjük a csokis-mascarponéval.</li>
+									<li>Végül a piskótákat tetszés szerint sorakoztatva megkenjük a krémmel.</li>
+									<li>A külsejére tegyünk félre a krémből, és vonjuk be vele a tortát.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+
+				<script>
+					// Elindítjuk az alapértelmezett panelt
+					document.getElementById("defaultOpen").click();
+				</script>
+
+			</div>
+		</div>
+	</body>
+
+	<footer>
+		<div id="footer">
+			<p>Kövess minket különböző <span>social media</span> oldalainkon is</p>
+				<a href="https://facebook.com"><img src="images/face_logo.png"></a>
+				<a href="https://youtube.com"><img src="images/youtube_logo.png"></a>
+				<a href="https://twitter.com"><img src="images/twitter_logo.png"></a>
+				<a href="https://instagram.com"><img src="images/insta_logo.png"></a>
+		</div>
+		<p style="text-align: center">Webtervezés gyakorlat 2019</p>
+	<footer>
+
+
+</html>
