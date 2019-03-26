@@ -1,6 +1,5 @@
 function setHeaderImage(){
 	var random = Math.floor(Math.random() * 7);
-	console.log(random);
 	switch(random){
 		case 0:
 			document.getElementById('header').style.backgroundImage = "url('images/back1.jpg')";

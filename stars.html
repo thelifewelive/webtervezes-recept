@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Oldal komponensek -->
+		<meta charset="utf-8">
+		<title>Az igazi receptkönyv</title>
+		<link rel="shortcut icon" href="images/title_logo.png" />
+
+		<!-- Styleok hozzáadása -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link rel="stylesheet" type="text/css" href="styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/recept.css">
+		<link rel="stylesheet" type="text/css" href="styles/cookie.css">
+
+		<!-- Scriptek betöltése -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/content-list.js"></script>
+		<script src="scripts/cookie.js"></script>
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+	</head>
+
+	<header>
+		<div id="header">
+			<div id="overlay">
+				<!-- Random háttér beállítása -->
+				<script>setHeaderImage()</script>
+				<img id="book-logo" src="images/book_logo.png">
+				<h1>receptkönyv<br><span>az igazi érték egy helyen</span></h1>
+
+				<!-- Menü létrehozása -->
+				<div id="menu">
+					<ul>
+						<li><a href="./index.html">Főoldal</a></li>
+						<li><a href="./soups.html">Levesek</a></li>
+						<li> <a href="./backed.html">Sültek</a></li>
+						<li><a href="./bagel.html">Sütemények</li>
+						<li><a href="./cake.html">Torták</a></li>
+						<li id="menu-active">Kedvencek</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+
+
+		<!-- Oldal tartalmának létrehozása -->
+		<div id="content">
+			<h1>Kedvelt receptek<span><br>Az összes egy helyen<span></h1>
+
+			<!-- Cookie ellenőrző -->
+			<div id="cookie" class="cookie">
+	  			<div class="cookie-content">
+	    			<h1>Cookie-k használata</h1>
+					<p>Az oldalunk ezen része használatához engedélyezned kell,
+						<br>hogy az oldal adatokat menthessen el a memóriájába.
+					</p>
+					<button id="accept-cookie" class="cookie-button">Engedélyez</button>
+					<button id="reject-cookie" class="cookie-button">Elutasít</button>
+	  			</div>
+			</div>
+
+			<script>
+				checkTheCookies();
+			</script>
+
+
+
+		</div>
+	</body>
+
+	<footer>
+		<div id="footer">
+			<p>Kövess minket különböző <span>social media</span> oldalainkon is</p>
+				<a href="https://facebook.com"><img src="images/face_logo.png"></a>
+				<a href="https://youtube.com"><img src="images/youtube_logo.png"></a>
+				<a href="https://twitter.com"><img src="images/twitter_logo.png"></a>
+				<a href="https://instagram.com"><img src="images/insta_logo.png"></a>
+		</div>
+		<p style="text-align: center">Webtervezés gyakorlat 2019</p>
+	<footer>
+
+
+</html>

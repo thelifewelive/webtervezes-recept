@@ -19,6 +19,7 @@
 		<!-- Scriptek betöltése -->
 		<script src="scripts/header.js"></script>
 		<script src="scripts/content-list.js"></script>
+		<script src="scripts/manage-cookies.js"></script>
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
@@ -41,7 +42,7 @@
 						<li> <a href="./backed.html">Sültek</a></li>
 						<li><a href="./bagel.html">Sütemények</li>
 						<li id="menu-active">Torták</li>
-						<li><a href="a.html">Kedvencek</a></li>
+						<li><a href="./stars.html">Kedvencek</a></li>
 					</ul>
 				</div>
 			</div>
@@ -93,7 +94,7 @@
 								</ol>
 							</div>
 						</div>
-						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+						<button class="kedvencek" onclick="addToFav('gyors')">Hozzáadás a kedvencekhez</button>
 					</div>
 				</div>
 
@@ -133,7 +134,7 @@
 								</ol>
 							</div>
 						</div>
-						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+						<button class="kedvencek" onclick="addToFav('csoki')">Hozzáadás a kedvencekhez</button>
 					</div>
 				</div>
 
@@ -180,7 +181,7 @@
 								</ol>
 							</div>
 						</div>
-						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+						<button class="kedvencek" onclick="addToFav('szivarvany')">Hozzáadás a kedvencekhez</button>
 					</div>
 				</div>
 
