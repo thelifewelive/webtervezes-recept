@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Oldal komponensek -->
+		<meta charset="utf-8">
+		<title>Az igazi receptkönyv</title>
+		<link rel="shortcut icon" href="images/title_logo.png" />
+
+		<!-- Styleok hozzáadása -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link rel="stylesheet" type="text/css" href="styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
+		<link rel="stylesheet" type="text/css" href="styles/recept.css">
+
+		<!-- Scriptek betöltése -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/content-list.js"></script>
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+	</head>
+
+	<header>
+		<div id="header">
+			<div id="overlay">
+				<!-- Random háttér beállítása -->
+				<script>setHeaderImage()</script>
+				<img id="book-logo" src="images/book_logo.png">
+				<h1>receptkönyv<br><span>az igazi érték egy helyen</span></h1>
+
+				<!-- Menü létrehozása -->
+				<div id="menu">
+					<ul>
+						<li><a href="./index.html">Főoldal</a></li>
+						<li><a href="./soups.html">Levesek</a></li>
+						<li id=menu-active>Sültek</li>
+						<li><a href="a.html">Sütemények</a></li>
+						<li><a href="a.html">Torták</a></li>
+						<li><a href="a.html">Kedvencek</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+		<!-- Oldal tartalmának létrehozása -->
+		<div id="content">
+			<div class="submenu">
+				<h1>Sült ételek receptei<span><br>A legjobb sült ételek egy helyen</span></h1>
+				<!-- Levesek almenü -->
+				<div class="tab">
+					<button id="defaultOpen" class="tablinks" onclick="openContent(event, 'Rantotthus')">Sütőben sült rántott hús</button>
+					<button class="tablinks" onclick="openContent(event, 'kfc')">KFC sült csirke</button>
+					<button class="tablinks" onclick="openContent(event, 'MezesSonka')">Mézes mustáros sült sonka</button>
+					<button class="tablinks" onclick="openContent(event, 'bacon')">Fokhagymás baconös sült sertéscomb</button>
+					<button class="tablinks" onclick="openContent(event, 'szelet')">Natúr szelet brokkolis hajdinával</button>
+				</div>
+
+				<!-- Sültek Contentek -->
+				<div id="Rantotthus" class="tabcontent animate">
+					<div class="recept">
+						<h1>Sütőben sűlt rántott hús<span><br>Panír meg miegysmás</span></h1>
+						<img src="./images/soup/sutobenrantotthus.jpg">
+						<p>Próbálok életmódot váltani,
+							így a cukrot és a túl sok zsírt mellőzöm mostanában.
+							Repceolajjall sütök, így azt végképp sajnáltam egy rántott húshoz :).
+							Mivel a fasírtot is sütőben sütöm, gondoltam, ennek sem lesz semmi baja így.
+							 Nagyon finom lett, ajánlom mindenkinek, hogy egyszer próbálja meg így.
+							 Na meg se olajszag, se rengeteg mosogatnivaló :).
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 4 adag</h2>
+								<ul>
+									<li>60 dkg csirkemell filé</li>
+									<li>só ízlés szerint</li>
+									<li>bors ízlés szerint</li>
+									<li>1 ek fokhagymakrém</li>
+									<li>3 db tojás</li>
+									<li>10 dkg finomliszt</li>
+									<li>15 dkg zsemlemorzsa</li>
+									<li>1 ek napraforgó olaj</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A csirkemellett kiklopfoljuk, amilyen vékonyan szeretjük.</li>
+									<li>Sózzuk, borsozzuk, vékonyan megkenjük fokhagymakrémmel.</li>
+									<li>Bepanírozzuk: liszt, tojás, zsemlemorzsa.</li>
+									<li>Egy tepsit bekenünk olajjal (én szilikonlapot használtam, azt nem kentem be). Rátesszük sorba egymás mellé a husikat, és a tetejüket vékonyan megkenjük olajjal.</li>
+									<li>Előmelegített sütőben sütjük. Félidőben megfordítjuk.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="kfc" class="tabcontent animate">
+					<div class="recept">
+						<h1>KFC sült csirke<span><br>Egy otthoni megoldás</span></h1>
+						<img src="./images/soup/kfc.jpg">
+						<p>Állítólag ez a titkos KFC recept.
+							Hogy így van-e, azt tesztelje le mindenki maga,
+							de az tuti, hogy oltári finom!
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 4 adag</h2>
+								<ul>
+									<li>250 g finomliszt</li>
+									<li>0.75 ek só</li>
+									<li>1 ek fekete bors</li>
+									<li>2 ek fehér bors</li>
+									<li>0.5 ek kakukkfű</li>
+									<li>0.5 ek bazsalikom</li>
+									<li>0.25 ek oregánó</li>
+									<li>1 ek zellersó</li>
+									<li>1 ek mustármag</li>
+									<li>2 ek fokhagymapor</li>
+									<li>1 ek gyömbér</li>
+									<li>4 ek fűszerpaprika</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<h3>A sült csirkéhez</h3>
+								<ol>
+									<li>A combokat megtisztítjuk és besózzuk.</li>
+								</ol>
+								<h3>A fűszeres liszthez</h3>
+								<ol>
+									<li>A fűszereket finomra őröljük és elkeverjük a liszttel.</li>
+								</ol>
+								<h3>A panírozáshoz</h3>
+								<ol>
+									<li>A combokat először megforgatjuk a lisztben, majd a tojásban, végül a morzsában.</li>
+									<li>Bő olajban aranybarnára sütjük.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="MezesSonka" class="tabcontent animate">
+					<div class="recept">
+						<h1>Mézes mustáros sült sonka<span><br>Az igazi ínyenceknek</span></h1>
+						<img src="./images/soup/mezesSonka.jpg">
+						<p>
+							Még két évvel ezelőtt, karácsonykor szerettem volna elkészíteni ezt a receptet,
+							de akkor hiába kerestem, sehol nem kaptam egész sonkát. Sőt, az egyik hentes nevetve mondta,
+							hogy majd jöjjek vissza húsvétkor, mert csak akkor tartanak. Hát így tettem, visszamentem.
+							Melegen és hidegen is egyaránt kiváló, sőt a sonkát előre is megfőzhetjük, és akkor másnap fél óra alatt elkészül.
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 12 adag</h2>
+								<h3>A főzővízhez</h3>
+								<ul>
+									<li>1.2 kg kötözött sonka</li>
+									<li>5 dl cider</li>
+									<li>2 dl víz></li>
+									<li>1 narancsból nyert narancshéj</li>
+									<li>2 db csillagánizs</li>
+									<li>3 cm gyömbér</li>
+									<li>1 közepes db vöröshagyma</li>
+								</ul>
+								<h3>A tűzdeléshez</h3>
+								<ul>
+									<li>szegfűszeg ízlés szerint</li>
+								</ul>
+								<h3>A mustáros mázhoz</h3>
+								<ul>
+									<li>2 dl cider</li>
+									<li>2 ek méz</li>
+									<li>2 teáskanál angol mustár</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<h3>A főzővízhez</h3>
+								<ol>
+									<li>A sonkát egy edénybe tesszük, felöntjük a ciderrel és annyi vízzel, ami pont ellepi.</li>
+									<li>A főzővizet narancshéjjal, reszelt gyömbérrel és csillagánizzsal fűszerezzük, hozzáadjuk a megtisztított és félbevágott hagymát, majd közepes lángon 1,5 órán át főzzük.</li>
+									<li>Ha a sonka megfőtt, akkor kivesszük a léből, konyhai törlőpapírral szárazra töröljük. Lefejtjük róla a bőr, de a hájas részt eszünk ágában se legyen eltávolítani!</li>
+									<li>A sonka felületét óvatosan, rácsosan beirdaljuk. A metszéspontokba beletűzdelünk egy-egy egész szegfűszeget.</li>
+								</ol>
+								<h3>A mustáros mázhoz</h3>
+								<ol>
+									<li>A mázhoz minden hozzávalót összekeverünk, és közepes lángon nagyjából a felére beforraljuk.</li>
+									<li>Ha elkészült a máz, akkor megkenjük vele a főtt sonkát, majd 25 perc alatt 200 fokra előmelegített sütőben süssük meg.</li>
+								</ol>
+								<h3>A panírozáshoz</h3>
+								<ol>
+									<li>A combokat először megforgatjuk a lisztben, majd a tojásban, végül a morzsában.</li>
+									<li>Bő olajban aranybarnára sütjük.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="bacon" class="tabcontent animate">
+					<div class="recept">
+						<h1>Fokhagymás baconös sült sertéscomb<span><br>Mindent bele</span></h1>
+						<img src="./images/soup/bacon.jpg">
+						<p>
+							Igazi lusta, hétvégi recept - húsz perc munka,
+							aztán mehet a sütőbe, az eredmény pedig egy mennyei, szaftos vasárnapi ebéd!
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 6 adag</h2>
+								<ul>
+									<li>1.2 kg sertéscomb</li>
+									<li>3 gerezd fokhagyma</li>
+									<li>só> ízlés szerint</li>
+									<li>bors ízlés szerint</li>
+									<li>2 ek sertészsír</li>
+									<li>10 szelet bacon</li>
+									<li>70 dkg burgonya</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A húst megmossuk és megtöröljük. A fokhagymát megpucoljuk, és kisebb darabokra vágjuk.</li>
+									<li>Egy kisebb késsel mélyebb bemetszéseket ejtünk, és belenyomjuk a fokhagymadarabokat.</li>
+									<li>Ha kész, megszórjuk sóval és borssal, majd beledörzsöljük. A húst beborítjuk a baconszeletekkel.</li>
+									<li>Egy nagyobb tepsit kikenünk a zsírral, és beletesszük a húst. Beborítjuk fóliával, és 200 fokra előmelegített sütőbe toljuk. Fél óra után levehetjük a hőfokot 180 fokra. Ha szükséges, önthetünk a hús alá 1-2 deci vizet.</li>
+									<li>A krumplit mossuk meg, és vágjuk kockára.</li>
+									<li>Újabb 30-40 perc múlva vegyük ki a húst a sütőből, szórjuk köré a krumplit, majd toljuk vissza a sütőbe, ezúttal azonban már fólia nélkül. Süssük még 30-40 percig, míg a krumpli megpuhul, és a bacon ropogós lesz.</li>
+									<li>Hagyjuk hűlni 10-20 percig, mielőtt felvágjuk.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+				<div id="szelet" class="tabcontent animate">
+					<div class="recept">
+						<h1>Natúr szelet brokkolis hajdinával<span><br>Mindenki kedvence</span></h1>
+						<img src="./images/soup/szelet.jpg">
+						<p>
+							Múltkor olvastam az Ízes kalandok blogon, és egyből megfogott.
+							El is készült, és nem rossz... sőt! Nagyon finom.
+							Sütöttem hozzá csirkemellet, és máris adott egy finom, könnyű és gyors ebéd.:)))
+						</p>
+						<div class="hozzavalok-elkeszites">
+							<div>
+								<h2>Hozzávalók / 5 adag</h2>
+								<h3>A körethez</h3>
+								<ul>
+									<li>1 bögre hajdina</li>
+									<li>5 dl víz</li>
+									<li>1 közepes db brokkoli</li>
+									<li>1 kis db vöröshagyma</li>
+									<li>2 ek napraforgó olaj</li>
+									<li>só ízlés szerint</li>
+									<li>bors ízlés szerint</li>
+									<li>ételízesítő ízlés szerint</li>
+								</ul>
+								<h3>A húshoz</h3>
+								<ul>
+									<li>9 db csirkemell filé</li>
+									<li>ételízesítő ízlés szerint</li>
+									<li>2 dl víz</li>
+									<li>1 dl napraforgó olaj</li>
+								</ul>
+							</div>
+							<div>
+								<h2>Elkészítés</h2>
+								<ol>
+									<li>A hajdinát megmossuk, és egy éjszakára beáztatjuk. Másnap a brokkolit megmossuk és rózsáira szedjük, majd sós vízben megfőzzük puhára.</li>
+									<li>Az aprított hagymát az olajon megdinszteljük, majd hozzáadjuk a beáztatott hajdinát is. Sózzuk, borsozzuk, ételízesítővel szórjuk meg, és pici vízzel lefedve megpároljuk a hajdinát. Ha kész, összekeverjük a főtt brokkolival, és ha szükséges, még utána sózhatunk. </li>
+									<li>A húst ételízesítővel szórjuk meg, és pici olajon megpirítjuk mindkét oldalát, majd öntünk rá kevés vizet, és lefedve megpároljuk. Ha kész, a brokkolis hajdinával tálaljuk.</li>
+								</ol>
+							</div>
+						</div>
+						<button class="kedvencek">Hozzáadás a kedvencekhez</button>
+					</div>
+				</div>
+
+
+				<script>
+					// Elindítjuk az alapértelmezett panelt
+					document.getElementById("defaultOpen").click();
+				</script>
+
+			</div>
+		</div>
+	</body>
+
+	<footer>
+		<div id="footer">
+			<p>Kövess minket különböző <span>social media</span> oldalainkon is</p>
+				<a href="https://facebook.com"><img src="images/face_logo.png"></a>
+				<a href="https://youtube.com"><img src="images/youtube_logo.png"></a>
+				<a href="https://twitter.com"><img src="images/twitter_logo.png"></a>
+				<a href="https://instagram.com"><img src="images/insta_logo.png"></a>
+		</div>
+		<p style="text-align: center">Webtervezés gyakorlat 2019</p>
+	<footer>
+
+
+</html>
