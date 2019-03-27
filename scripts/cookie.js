@@ -35,6 +35,8 @@ function checkTheCookies(){
 		accept.onclick = function (){
 			//Egyébként adjunk egy cookie-t, hogy tudjuk később nem kell ellenőrizni
 			document.cookie = "accept=true";
+			var array = [];
+			document.cookie = "recipe=" + JSON.stringify(array);
 			box.style.display = "none";
 		};
 	}

@@ -11,6 +11,7 @@ function addToFav(name){
 	//Ha nem engedélyeztük a cookikat -engedélyezzük
 	if(x == ""){
 		document.cookie = "accept=true";
+		document.cookie = "recipe=" + JSON.stringify(array);
 	}
 
 	//Szedjük le az eddigi recepteket ha van.
@@ -73,7 +74,8 @@ function getRecipeId(recipe, array){
 
 function listRecipes(){
 	var panel = document.getElementById("recipes");
-	if(JSON.parse(getCookie("recipe")).length == 0){
+	var x = document.cookie;
+	if(document.cookie == "" || JSON.parse(getCookie("recipe")).length == 0){
 		//Tájékoztatunk ha nincs még semmi benne.
 		panel.innerHTML = "<h3>Jelenleg még semmit nem adtál hozzá a kedvencekhez!</h3>";
 	}else{
