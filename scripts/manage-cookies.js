@@ -108,19 +108,19 @@ function listSoups(array){
 	for(i=0; i<array.length; i++){
 		switch(array[i]){
 			case 'Husleves':
-				string += "<tr><td>Expressz Húsleves</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Husleves"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Expressz Húsleves</td><td class='button-td'><button onclick='showFav(" + '"soups"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Husleves"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'Gyumolcsleves':
-				string += "<tr><td>Puddingos gyümölcsleves</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Gyumolcsleves"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Puddingos gyümölcsleves</td><td class='button-td'><button onclick='showFav(" + '"soups"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Gyumolcsleves"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'Legenyfogo':
-				string += "<tr><td>Legényfogóleves</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Legenyfogo"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Legényfogóleves</td><td class='button-td'><button onclick='showFav(" + '"soups"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Legenyfogo"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'Sajtosfokhagyma':
-				string += "<tr><td>Sajtos fokhagymakrémleves</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Sajtosfokhagyma"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Sajtos fokhagymakrémleves</td><td class='button-td'><button onclick='showFav(" + '"soups"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Sajtosfokhagyma"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'Gulyas':
-				string += "<tr><td>Babgulyás gazdagon</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Gulyas"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Babgulyás gazdagon</td><td class='button-td'><button onclick='showFav(" + '"soups"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Gulyas"' + ")'>Eltávolít</button></td></tr>";
 				break;
 		}
 	}
@@ -137,19 +137,19 @@ function listBacked(array){
 	for(i=0; i<array.length; i++){
 		switch(array[i]){
 			case 'Rantotthus':
-				string += "<tr><td>Sütőben sült rántott hús</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"Rantotthus"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Sütőben sült rántott hús</td><td class='button-td'><button onclick='showFav(" + '"backed"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"Rantotthus"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'kfc':
-				string += "<tr><td>KFC sült csirke</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"kfc"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>KFC sült csirke</td><td class='button-td'><button onclick='showFav(" + '"backed"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"kfc"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'MezesSonka':
-				string += "<tr><td>Mézes mustáros sült sonka</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"MezesSonka"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Mézes mustáros sült sonka</td><td class='button-td'><button onclick='showFav(" + '"backed"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"MezesSonka"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'bacon':
-				string += "<tr><td>Fokhagymás baconös sült sertéscomb</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"bacon"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Fokhagymás baconös sült sertéscomb</td><td class='button-td'><button onclick='showFav(" + '"backed"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"bacon"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'szelet':
-				string += "<tr><td>Natúr szelet brokkolis hajdinával</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"szelet"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Natúr szelet brokkolis hajdinával</td><td class='button-td'><button onclick='showFav(" + '"backed"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"szelet"' + ")'>Eltávolít</button></td></tr>";
 				break;
 		}
 	}
@@ -166,13 +166,13 @@ function listBagels(array){
 	for(i=0; i<array.length; i++){
 		switch(array[i]){
 			case 'vanella':
-				string += "<tr><td>Vanella szelet</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"vanella"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Vanella szelet</td><td class='button-td'><button onclick='showFav(" + '"bagels"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"vanella"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'pilota':
-				string += "<tr><td>Pilóta szelet</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"pilota"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Pilóta szelet</td><td class='button-td'><button onclick='showFav(" + '"bagels"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"pilota"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'kolibri':
-				string += "<tr><td>Kolibri szelet</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"kolibri"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Kolibri szelet</td><td class='button-td'><button onclick='showFav(" + '"bagels"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"kolibri"' + ")'>Eltávolít</button></td></tr>";
 				break;
 		}
 	}
@@ -188,13 +188,13 @@ function listCakes(array){
 	for(i=0; i<array.length; i++){
 		switch(array[i]){
 			case 'gyors':
-				string += "<tr><td>A leggyorsabb csokitorta</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"gyors"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>A leggyorsabb csokitorta</td><td class='button-td'><button onclick='showFav(" + '"cakes"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"gyors"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'csoki':
-				string += "<tr><td>Csupa csoki torta (sütés nélkül)</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"csoki"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Csupa csoki torta (sütés nélkül)</td><td class='button-td'><button onclick='showFav(" + '"cakes"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"csoki"' + ")'>Eltávolít</button></td></tr>";
 				break;
 			case 'szivarvany':
-				string += "<tr><td>Szivárvány torta</td><td class='button-td'><button>Megtekint</button><button onclick='removeRecipe(" + '"szivarvany"' + ")'>Eltávolít</button></td></tr>";
+				string += "<tr><td>Szivárvány torta</td><td class='button-td'><button onclick='showFav(" + '"cakes"' + ")'>Megtekint</button><button onclick='removeRecipe(" + '"szivarvany"' + ")'>Eltávolít</button></td></tr>";
 				break;
 		}
 	}

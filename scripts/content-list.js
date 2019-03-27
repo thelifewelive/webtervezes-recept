@@ -18,3 +18,20 @@ function openContent(evt, contentName) {
   	document.getElementById(contentName).style.display = "block";
   	evt.currentTarget.className += " active";
 }
+
+function showFav(contentPage){
+	switch(contentPage){
+		case 'soups':
+			window.location.href = "../soups.html";
+			break;
+		case 'backed':
+			window.location.href = "../backed.html";
+			break;
+		case 'bagels':
+			window.location.href = "../bagel.html";
+			break;
+		case 'cakes':
+			window.location.href = "../cakse.html";
+			break;
+	}
+}
