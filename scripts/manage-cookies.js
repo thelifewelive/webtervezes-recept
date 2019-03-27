@@ -14,7 +14,7 @@ function addToFav(name){
 	}
 
 	//Szedjük le az eddigi recepteket ha van.
-	if(getCookie("recipe") != undefined){
+	if(JSON.parse(getCookie("recipe")).length != 0){
 		array = JSON.parse(getCookie("recipe"));
 	}
 
@@ -56,7 +56,10 @@ function removeRecipe(recipe){
 	}
 
 	document.cookie = "recipe=" + JSON.stringify(retarray);
-	message("Az recept el lett távolítva!");
+	message("Az recept el lett távolítva!<br><span>Az oldal hamarosan újratölt.</span>");
+	setTimeout( function() {
+		location.reload();
+	}, 3000);
 }
 
 function getRecipeId(recipe, array){
@@ -70,7 +73,7 @@ function getRecipeId(recipe, array){
 
 function listRecipes(){
 	var panel = document.getElementById("recipes");
-	if(getCookie("recipe") === undefined){
+	if(JSON.parse(getCookie("recipe")).length == 0){
 		//Tájékoztatunk ha nincs még semmi benne.
 		panel.innerHTML = "<h3>Jelenleg még semmit nem adtál hozzá a kedvencekhez!</h3>";
 	}else{
