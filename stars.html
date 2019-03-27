@@ -16,11 +16,14 @@
 		<link rel="stylesheet" type="text/css" href="styles/sub-menu.css">
 		<link rel="stylesheet" type="text/css" href="styles/recept.css">
 		<link rel="stylesheet" type="text/css" href="styles/cookie.css">
+		<link rel="stylesheet" type="text/css" href="styles/list.css">
+		<link rel="stylesheet" type="text/css" href="styles/message.css">
 
 		<!-- Scriptek betöltése -->
 		<script src="scripts/header.js"></script>
 		<script src="scripts/content-list.js"></script>
 		<script src="scripts/cookie.js"></script>
+		<script src="scripts/manage-cookies.js"></script>
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
@@ -73,9 +76,20 @@
 				checkTheCookies();
 			</script>
 
+			<div id="recipes">
+				<script>
+					listRecipes();
+				</script>
+			</div>
+
 
 
 		</div>
+
+		<div id="message">
+			Valami üzenet
+		</div>
+
 	</body>
 
 	<footer>
