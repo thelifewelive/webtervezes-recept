@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/menu.css">
 		<link rel="stylesheet" type="text/css" href="styles/content.css">
 		<link rel="stylesheet" type="text/css" href="styles/footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/send.css">
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
@@ -33,13 +34,13 @@
 				<!-- Menü létrehozása -->
 				<div id="menu">
 					<ul>
-						<li id="menu-active">Főoldal</li>
+						<li>Főoldal</li>
 						<li><a href="./soups.html">Levesek</a></li>
 						<li><a href="./backed.html">Sültek</a></li>
 						<li><a href="./bagel.html">Sütemények</a></li>
 						<li><a href="./cake.html">Torták</li>
 						<li><a href="./stars.html">Kedvencek</a></li>
-						<li><a href="./send.html">Recept beküldése</a></li>
+						<li id="menu-active">Recept beküldése</li>
 					</ul>
 				</div>
 			</div>
@@ -50,36 +51,51 @@
 		<!-- Oldal tartalmának létrehozása -->
 		<div id="content">
 
-			<div class="post">
-				<h1>Pont most találtad meg a legjobb helyet</h1>
-				<p>
-					Szeretsz főzni, sütni?<br>
-					Vagy csak úgy érzed hiányzik valami az életedből?<br>
-					Esetleg csak imádsz a konyhádban lenni?
-					Hidd el amit mondok most neked <span>a legjobb helyen jársz</span>,
-					hogy elsajátítsd azt a tudást amivel lenyűgözhetsz szinte bárkit!
-				</p>
-				<p>
-					Tarts velünk látogasd az oldalt az új tartalmakért és csinálj
-					olyan finom ételeket amiket még nem látott világ.
-				</p>
-				<p>
-					Ha megtetszett egy recept az oldalon nem kell felesleges időt
-					ölnod abba, hogy legközelebb ismét megkeresd egyszerűen csak
-					rakd a kedvenceid közé, úgy hogy a receptnél a <span>Hozzáadás a kedvencekhez</span> gomb -ra
-					kattintasz.
-				</p>
-			</div>
-			<div class="post next">
-				<h1>A szerkesztők ajánlatai</h1>
-				<p>
-					<img src="images/soup/fokhagyma.jpg"> Egyik személyes kedvencünk ez a NOSALTY féle fokhagymakrémleves.
-					Az íze isteni, az illata csodálatos. Mindenkinek csak ajánlani tudom. Egyszer mindenképp megéri elkészíteni.
-				</p>
-				<p>
-					<img src="images/soup/sertesporkolt.jpg"> Gyermekkorom egyik kedvenc étele. Nem is tudom elképzelni az életem enélkül az étel nélkül. Muszáj kipróbálnod!
-				</p>
-			</div>
+			<h1>Recept belüldése</h1>
+			<p>
+				Ezen űrlap segítségével egy receptet tud beküldeni.<br>
+				Mi azt megnézzük és ha érdekesnek találjuk akkor frissítjük az
+				adatbázisunkba.
+			</p>
+
+			<form id="send-recept" method="post" accept-charset="send.php">
+
+				<div class="input">
+					<label for="recept-nev">Recept neve: </label><br>
+					<input type="text" id="recept-nev"><br>
+				</div>
+
+				<div class="input">
+					<label for="recept-story">Recept története: </label><br>
+					<textarea rows="4" cols="50" id="recept-story"></textarea><br>
+				</div>
+
+				<div class="input adds">
+					<label for="recept-add">Hozzávalók: </label><br>
+					<textarea rows="4" cols="50" id="recept-add"></textarea>
+				</div>
+
+				<div class="input adds">
+					<label for="recept-make">Elkészítés: </label><br>
+					<textarea rows="4" cols="50" id="recept-make"></textarea>
+				</div>
+
+				<div class="input">
+					<label for="recept-select">Típus: </label><br>
+					<select id="recept-select">
+  						<option value="soup">Leves</option>
+  						<option value="backed">Sült</option>
+  						<option value="bagel">Sütemény</option>
+  						<option value="cake">Torta</option>
+					</select>
+				</div>
+
+				<input type="submit" value="Beküld">
+
+			</form>
+
+
+
 		</div>
 	</body>
 
