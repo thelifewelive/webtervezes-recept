@@ -1,0 +1,32 @@
+@media print {
+
+	#header h1 {
+		color: black;
+		text-shadow: 0px 0px 0px white;
+	}
+
+	#header img {
+		filter: invert(0);
+	}
+
+	#content {
+		box-shadow: 0px 0px 0px white;
+	}
+
+	.post {
+		box-shadow: 0px 0px 0px white;
+		border: 1px solid black;
+	}
+
+	.post img {
+		box-shadow: 0px 0px 0px white;
+	}
+
+	.post span {
+		color: black;
+	}
+
+	#footer span{
+		color: black;
+	}
+}
